@@ -11,16 +11,25 @@
  <body>
  	
  	<script type="text/javascript">
+        function verification(liste, type) {
+            selected = false;
+            for(instrument of liste) {
+                if(document.getElementById(instrument).checked) { selected = true; }
+            }
+            if(!selected) {
+                document.getElementById("error").value = "Choisissez un " + type;
+                return false;
+            }
+            return true;
+        }
+
         function validation() {
+            document.getElementById("error").value = "";
             instrument_list = ["trompette", "trombone", "cor", "saxophone"];
-            instrument_selected = false;
-            for(instrument of instrument_list) {
-                if(document.getElementById(instrument).checked) { instrument_selected = true }
-            }
-            if(!instrument_selected) {
-                document.getElementById("error").value = "Choisissez un instrument";
-                return;
-            }
+            if(!verification(instrument_list, "instrument")) { return }
+            metal_list = ["cuivre 1", "cuivre 2", "cuivre 3"];
+            if(!verification(metal_list, "metal")) { return }
+
 
             if (document.getElementById("trompette").checked){
                 if (document.getElementById("cuivre 1").checked){
