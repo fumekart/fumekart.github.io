@@ -16,21 +16,35 @@
 
     var prix = {};
     prix["trompette"] =  {};
-    prix["trombonne"] =  {};
+    prix["trombone"] =  {};
     prix["cor"] =  {};
     prix["saxophone"] =  {};
     prix["trompette"]["cuivre 1"] = 123;
     prix["trompette"]["cuivre 2"] = 143;
     prix["trompette"]["cuivre 3"] = 423;
-    prix["trombonne"]["cuivre 1"] = 125;
-    prix["trombonne"]["cuivre 2"] = 147;
-    prix["trombonne"]["cuivre 3"] = 422;
+    prix["trombone"]["cuivre 1"] = 125;
+    prix["trombone"]["cuivre 2"] = 147;
+    prix["trombone"]["cuivre 3"] = 422;
     prix["cor"]["cuivre 1"] = 128;
     prix["cor"]["cuivre 2"] = 146;
     prix["cor"]["cuivre 3"] = 422;
     prix["saxophone"]["cuivre 1"] = 123;
     prix["saxophone"]["cuivre 2"] = 193;
     prix["saxophone"]["cuivre 3"] = 823;
+
+    var description = {};
+    description["trompette"] = "La trompette, qui pue qui pète!";
+    description["cor"] = "Cor au pied!";
+    description["trombone"] = "Black trombone! Monotone!";
+    description["saxophone"] = "Pouet!";
+
+    description["cuivre 1"] = "Le jaune, classique, une valeur sure!";
+    description["cuivre 2"] = "Le rosé. Rafraichissant l'été!";
+    description["cuivre 3"] = "Le blanc pour se la péter comme un bourgeois!";
+
+    var image = {};
+    image["trombone"] = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Trombone_CG_Bach42AG.jpg/375px-Trombone_CG_Bach42AG.jpg";
+    image["trompette"] = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Trompette_Sib.jpg/375px-Trompette_Sib.jpg";
 
     function verification(liste, type) {
         selected = false;
@@ -53,6 +67,8 @@
         if(!instrument_selection || !metal_selection) { return }
 
         document.getElementById("resultat").value = prix[instrument_selection][metal_selection];
+        document.getElementById("description").innerHTML = description[instrument_selection] + " " + description[metal_selection];
+        document.getElementById("image").src = image[instrument_selection];
 
     }
     </script>
@@ -75,6 +91,8 @@
     </h3>
     <p>Résultat : <input type="text" size="10" id="resultat" disabled="disabled"></p>
     <p id="error"></p>
+    <p id="description"></p>
+    <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/270px-SNice.svg.png">
 
 </body>
 </html>
