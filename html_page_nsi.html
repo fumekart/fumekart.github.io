@@ -31,14 +31,14 @@
     prix["saxophone"]["cuivre 1"] = 123;
     prix["saxophone"]["cuivre 2"] = 193;
     prix["saxophone"]["cuivre 3"] = 823;
- 
+
     function verification(liste, type) {
         selected = false;
         for(instrument of liste) {
             if(document.getElementById(instrument).checked) { return instrument }
         }
         if(!selected) {
-            document.getElementById("error").value = "Choisissez un " + type;
+            document.getElementById("error").innerHTML = "Choisissez un " + type;
             return false;
         }
     }
@@ -74,7 +74,7 @@
         <input type="button" onclick="validation()" value="afficher le prix">
     </h3>
     <p>Résultat : <input type="text" size="10" id="resultat" disabled="disabled"></p>
-    <input type="text" id="error" disabled="disabled"></p>
+    <p id="error"></p>
 
 </body>
 </html>
