@@ -14,37 +14,37 @@
     instrument_list = ["trompette", "trombone", "cor", "saxophone"];
     metal_list = ["cuivre 1", "cuivre 2", "cuivre 3"];
 
-    var prix = {};
-    prix["trompette"] =  {};
-    prix["trombone"] =  {};
-    prix["cor"] =  {};
-    prix["saxophone"] =  {};
-    prix["trompette"]["cuivre 1"] = 123;
-    prix["trompette"]["cuivre 2"] = 143;
-    prix["trompette"]["cuivre 3"] = 423;
-    prix["trombone"]["cuivre 1"] = 125;
-    prix["trombone"]["cuivre 2"] = 147;
-    prix["trombone"]["cuivre 3"] = 422;
-    prix["cor"]["cuivre 1"] = 128;
-    prix["cor"]["cuivre 2"] = 146;
-    prix["cor"]["cuivre 3"] = 422;
-    prix["saxophone"]["cuivre 1"] = 123;
-    prix["saxophone"]["cuivre 2"] = 193;
-    prix["saxophone"]["cuivre 3"] = 823;
+    var instrument_description = {};
+    instrument_description["trompette"] =  {};
+    instrument_description["trompette"]["info"] = "La trompette, qui pue qui pète!";
+    instrument_description["trompette"]["image"] = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Trompette_Sib.jpg/375px-Trompette_Sib.jpg";
+    instrument_description["trombone"] =  {};
+    instrument_description["trombone"]["info"] = "Black trombone! Monotone!";
+    instrument_description["trombone"]["image"] = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Trombone_CG_Bach42AG.jpg/375px-Trombone_CG_Bach42AG.jpg";
+    instrument_description["cor"] =  {};
+    instrument_description["cor"]["info"] = "Cor au pied!";
+    instrument_description["saxophone"] =  {};
+    instrument_description["saxophone"]["info"] = "Pouet!";
 
-    var description = {};
-    description["trompette"] = "La trompette, qui pue qui pète!";
-    description["cor"] = "Cor au pied!";
-    description["trombone"] = "Black trombone! Monotone!";
-    description["saxophone"] = "Pouet!";
+    instrument_description["trompette"]["cuivre 1"] = 123;
+    instrument_description["trompette"]["cuivre 2"] = 143;
+    instrument_description["trompette"]["cuivre 3"] = 423;
+    instrument_description["trombone"]["cuivre 1"] = 125;
+    instrument_description["trombone"]["cuivre 2"] = 147;
+    instrument_description["trombone"]["cuivre 3"] = 422;
+    instrument_description["cor"]["cuivre 1"] = 128;
+    instrument_description["cor"]["cuivre 2"] = 146;
+    instrument_description["cor"]["cuivre 3"] = 422;
+    instrument_description["saxophone"]["cuivre 1"] = 123;
+    instrument_description["saxophone"]["cuivre 2"] = 193;
+    instrument_description["saxophone"]["cuivre 3"] = 823;
 
-    description["cuivre 1"] = "Le jaune, classique, une valeur sure!";
-    description["cuivre 2"] = "Le rosé. Rafraichissant l'été!";
-    description["cuivre 3"] = "Le blanc pour se la péter comme un bourgeois!";
+    var metal_description = {};
+    metal_description["cuivre 1"] = "Le jaune, classique, une valeur sure!";
+    metal_description["cuivre 2"] = "Le rosé. Rafraichissant l'été!";
+    metal_description["cuivre 3"] = "Le blanc pour se la péter comme un bourgeois!";
 
     var image = {};
-    image["trombone"] = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Trombone_CG_Bach42AG.jpg/375px-Trombone_CG_Bach42AG.jpg";
-    image["trompette"] = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Trompette_Sib.jpg/375px-Trompette_Sib.jpg";
 
     function verification(liste, type) {
         selected = false;
@@ -66,14 +66,14 @@
 
         if(!instrument_selection || !metal_selection) { return }
 
-        document.getElementById("resultat").value = prix[instrument_selection][metal_selection];
-        document.getElementById("description").innerHTML = description[instrument_selection] + " " + description[metal_selection];
-        document.getElementById("image").src = image[instrument_selection];
+        document.getElementById("resultat").value = instrument_description[instrument_selection][metal_selection];
+        document.getElementById("metal_description").innerHTML = instrument_description[instrument_selection]["info"] + " " + metal_description[metal_selection];
+        document.getElementById("image").src = instrument_description[instrument_selection]["image"];
 
     }
     </script>
 
-    <h1> Differents Instruments et prix</h1>
+    <h1> Differents Instruments et instrument_description</h1>
 
     <h3> Choisissez un instruments :
         <input type="radio" name="instrument" id="trompette"> trompette
@@ -87,11 +87,11 @@
         <input type="radio" name="metal" id="cuivre 3"> cuivre blanc
     </h3>
     <h3>
-        <input type="button" onclick="validation()" value="afficher le prix">
+        <input type="button" onclick="validation()" value="afficher le instrument_description">
     </h3>
     <p>Résultat : <input type="text" size="10" id="resultat" disabled="disabled"></p>
     <p id="error"></p>
-    <p id="description"></p>
+    <p id="metal_description"></p>
     <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/270px-SNice.svg.png">
 
 </body>
