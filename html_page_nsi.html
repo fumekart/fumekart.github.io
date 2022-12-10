@@ -11,6 +11,27 @@
 <body>
 
   <script type="text/javascript">
+    instrument_list = ["trompette", "trombone", "cor", "saxophone"];
+    metal_list = ["cuivre 1", "cuivre 2", "cuivre 3"];
+
+    var prix = {};
+    prix["trompette"] =  {};
+    prix["trombonne"] =  {};
+    prix["cor"] =  {};
+    prix["saxophone"] =  {};
+    prix["trompette"]["cuivre 1"] = 123;
+    prix["trompette"]["cuivre 2"] = 143;
+    prix["trompette"]["cuivre 3"] = 423;
+    prix["trombonne"]["cuivre 1"] = 125;
+    prix["trombonne"]["cuivre 2"] = 147;
+    prix["trombonne"]["cuivre 3"] = 422;
+    prix["cor"]["cuivre 1"] = 128;
+    prix["cor"]["cuivre 2"] = 146;
+    prix["cor"]["cuivre 3"] = 422;
+    prix["saxophone"]["cuivre 1"] = 123;
+    prix["saxophone"]["cuivre 2"] = 193;
+    prix["saxophone"]["cuivre 3"] = 823;
+ 
     function verification(liste, type) {
         selected = false;
         for(instrument of liste) {
@@ -24,60 +45,16 @@
 
     function validation() {
         document.getElementById("error").value = "";
-        instrument_list = ["trompette", "trombone", "cor", "saxophone"];
-        metal_list = ["cuivre 1", "cuivre 2", "cuivre 3"];
-
+ 
         instrument_selection = verification(instrument_list, "instrument");
         metal_selection = verification(metal_list, "métal");
 
+
         if(!instrument_selection || !metal_selection) { return }
- 
-            if (document.getElementById("trompette").checked){
-                if (document.getElementById("cuivre 1").checked){
-                    document.getElementById("resultat").value = 11;
-                }
-                else if (document.getElementById("cuivre 2").checked){
-                    document.getElementById("resultat").value = 12;
-                }
-                else {
-                    document.getElementById("resultat").value = 13;
-                }
-            }
-            else if  (document.getElementById("cor").checked){
-                if (document.getElementById("cuivre 1").checked){
-                    document.getElementById("resultat").value = 21;
-                }
-                else if (document.getElementById("cuivre 2").checked){
-                    document.getElementById("resultat").value = 22;
-                }
-                else {
-                    document.getElementById("resultat").value = 23;
-                }
-            }
-            else if  (document.getElementById("trombone").checked){
-                if (document.getElementById("cuivre 1").checked){
-                    document.getElementById("resultat").value = 31;
-                }
-                else if (document.getElementById("cuivre 2").checked){
-                    document.getElementById("resultat").value = 32;
-                }
-                else {
-                    document.getElementById("resultat").value = 33;
-                }
-            }
-            else {
-                if (document.getElementById("cuivre 1").checked){
-                    document.getElementById("resultat").value = 41;
-                }
-                else if (document.getElementById("cuivre 2").checked){
-                    document.getElementById("resultat").value = 42;
-                }
-                else {
-                    document.getElementById("resultat").value = 43;
-                }
-            }
-            
-        }
+
+        document.getElementById("resultat").value = prix[instrument_selection][metal_selection];
+
+    }
     </script>
 
     <h1> Differents Instruments et prix</h1>
