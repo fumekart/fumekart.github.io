@@ -1,36 +1,37 @@
 <!doctype html>
 <html lang="fr">
- <head>
- 	<link href="style.css" rel="stylesheet">
- </head>
- 	
- 	<title> Instruments et cout</title>
- 	<meta name="title" content="Salut">
- 	<meta name="author" content="Elouan">
- </head>
- <body>
- 	
- 	<script type="text/javascript">
-        function verification(liste, type) {
-            selected = false;
-            for(instrument of liste) {
-                if(document.getElementById(instrument).checked) { selected = true; }
-            }
-            if(!selected) {
-                document.getElementById("error").value = "Choisissez un " + type;
-                return false;
-            }
-            return true;
+<head>
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<title> Instruments et cout</title>
+<meta name="title" content="Salut">
+<meta name="author" content="Elouan">
+</head>
+<body>
+
+  <script type="text/javascript">
+    function verification(liste, type) {
+        selected = false;
+        for(instrument of liste) {
+            if(document.getElementById(instrument).checked) { return instrument }
         }
+        if(!selected) {
+            document.getElementById("error").value = "Choisissez un " + type;
+            return false;
+        }
+    }
 
-        function validation() {
-            document.getElementById("error").value = "";
-            instrument_list = ["trompette", "trombone", "cor", "saxophone"];
-            if(!verification(instrument_list, "instrument")) { return }
-            metal_list = ["cuivre 1", "cuivre 2", "cuivre 3"];
-            if(!verification(metal_list, "metal")) { return }
+    function validation() {
+        document.getElementById("error").value = "";
+        instrument_list = ["trompette", "trombone", "cor", "saxophone"];
+        metal_list = ["cuivre 1", "cuivre 2", "cuivre 3"];
 
+        instrument_selection = verification(instrument_list, "instrument");
+        metal_selection = verification(metal_list, "métal");
 
+        if(!instrument_selection || !metal_selection) { return }
+ 
             if (document.getElementById("trompette").checked){
                 if (document.getElementById("cuivre 1").checked){
                     document.getElementById("resultat").value = 11;
@@ -77,10 +78,10 @@
             }
             
         }
- 	</script>
+    </script>
 
- 	<h1> Differents Instruments et prix</h1>
- 	
+    <h1> Differents Instruments et prix</h1>
+
     <h3> Choisissez un instruments :
         <input type="radio" name="instrument" id="trompette"> trompette
         <input type="radio" name="instrument" id="cor"> cor
@@ -98,5 +99,5 @@
     <p>Résultat : <input type="text" size="10" id="resultat" disabled="disabled"></p>
     <input type="text" id="error" disabled="disabled"></p>
 
- </body>
+</body>
 </html>
