@@ -12,6 +12,16 @@
  	
  	<script type="text/javascript">
         function validation() {
+            instrument_list = ["trompette", "trombone", "cor", "saxophone"];
+            instrument_selected = false;
+            for(instrument of instrument_list) {
+                if(document.getElementById(instrument).checked) { instrument_selected = true }
+            }
+            if(!instrument_selected) {
+                document.getElementById("error").value = "Choisissez un instrument";
+                return;
+            }
+
             if (document.getElementById("trompette").checked){
                 if (document.getElementById("cuivre 1").checked){
                     document.getElementById("resultat").value = 11;
@@ -58,7 +68,6 @@
             }
             
         }
-        document.write(validation())
  	</script>
 
  	<h1> Differents Instruments et prix</h1>
@@ -78,5 +87,7 @@
         <input type="button" onclick="validation()" value="afficher le prix">
     </h3>
     <p>Résultat : <input type="text" size="10" id="resultat" disabled="disabled"></p>
+    <input type="text" id="error" disabled="disabled"></p>
+
  </body>
 </html>
