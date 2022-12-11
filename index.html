@@ -13,25 +13,22 @@
     instrument_list = ["trompette", "trombone", "cor", "saxophone"];
     metal_list = ["cuivre 1", "cuivre 2", "cuivre 3"];
 
+    var metal_description = {
+      "cuivre 1": "Le jaune, classique, une valeur sure!",
+      "cuivre 2": "Le rosé. Rafraichissant l'été!",
+      "cuivre 3": "Le blanc pour se la péter comme un bourgeois!"
+    };
 
-    /*async function getJSON(url) {
-        return fetch(url)
-            .then((response)=>response.json())
-            .then((responseJson)=>{return responseJson});
+    let instrument_description;
+    const chargement_description = async function() {
+       try {
+          instrument_description = await fetch("description.json").then(response => response.json())
+          console.log(instrument_description);
+       } catch (err) {
+          console.log(err);
+       }
     }
-
-    var instrument_description = await getJSON("https://fumekart.github.io/description.json");
-    */
-    import instrument_description from './description.json' assert { type: 'JSON' };
-
-    console.log(instrument_description);
-
-    var metal_description = {};
-    metal_description["cuivre 1"] = "Le jaune, classique, une valeur sure!";
-    metal_description["cuivre 2"] = "Le rosé. Rafraichissant l'été!";
-    metal_description["cuivre 3"] = "Le blanc pour se la péter comme un bourgeois!";
-
-    var image = {};
+    chargement_description(); // Tout ça pour charger instrument_description.json !!!
 
     function verification(liste, type) {
         selected = false;
