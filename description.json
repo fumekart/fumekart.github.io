@@ -1,0 +1,29 @@
+{
+  "trompette": {
+    "info": "La trompette, qui pue qui pète!",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Trompette_Sib.jpg/375px-Trompette_Sib.jpg",
+    "cuivre 1": 123,
+    "cuivre 2": 143,
+    "cuivre 3": 423
+  },
+  "trombone": {
+    "info": "Black trombone! Monotone!",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Trombone_CG_Bach42AG.jpg/375px-Trombone_CG_Bach42AG.jpg",
+    "cuivre 1": 125,
+    "cuivre 2": 147,
+    "cuivre 3": 422
+  },
+  "cor": {
+    "info": "Cor au pied!",
+    "image": "",
+    "cuivre 1": 128,
+    "cuivre 2": 146,
+    "cuivre 3": 422
+  },
+  "saxophone": {
+    "info": "Pouet!",
+    "cuivre 1": 123,
+    "cuivre 2": 193,
+    "cuivre 3": 823
+  }
+}
