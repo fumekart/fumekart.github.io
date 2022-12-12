@@ -2,9 +2,9 @@
   "trompette": {
     "info": "La trompette est un instrument a vent de la famille des cuivres",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Trompette_Sib.jpg/375px-Trompette_Sib.jpg",
-    "cuivre 1": 123,
-    "cuivre 2": 143,
-    "cuivre 3": 423
+    "cuivre 1": 239 Є,
+    "cuivre 2": 5699 Є,
+    "cuivre 3": 499 Є
   },
   "trombone": {
     "info": "Black trombone! Monotone!",
@@ -14,11 +14,11 @@
     "cuivre 3": 422
   },
   "cor": {
-    "info": "Cor au pied!",
+    "info": "Le cor est ",
     "image": "https://commons.wikimedia.org/wiki/File:French_horn_front.png?uselang=fr",
-    "cuivre 1": 128,
-    "cuivre 2": 146,
-    "cuivre 3": 422
+    "cuivre 1": 1498 Є,
+    "cuivre 2": 9679 Є,
+    "cuivre 3": 5149 Є
   },
   "saxophone": {
     "info": "Pouet!",
