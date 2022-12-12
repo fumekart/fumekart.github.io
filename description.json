@@ -15,13 +15,14 @@
   },
   "cor": {
     "info": "Cor au pied!",
-    "image": "",
+    "image": "https://commons.wikimedia.org/wiki/File:French_horn_front.png?uselang=fr",
     "cuivre 1": 128,
     "cuivre 2": 146,
     "cuivre 3": 422
   },
   "saxophone": {
     "info": "Pouet!",
+    "image": "https://commons.wikimedia.org/wiki/File:CurvedSopranoAltoTenorSaxophoneComparison.jpg?uselang=fr",
     "cuivre 1": 123,
     "cuivre 2": 193,
     "cuivre 3": 823
