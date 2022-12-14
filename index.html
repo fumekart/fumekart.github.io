@@ -50,7 +50,7 @@
 
         if(!instrument_selection || !metal_selection) { return }
 
-        document.getElementById("prix.instrument").value = instrument_description[instrument_selection][metal_selection];
+        document.getElementById("prix instrument").value = instrument_description[instrument_selection][metal_selection];
         document.getElementById("metal_description").innerHTML = instrument_description[instrument_selection]["info"] + " " + metal_description[metal_selection];
         document.getElementById("image").src = instrument_description[instrument_selection]["image"];
 
@@ -73,7 +73,7 @@
     <h3>
         <input type="button" onclick="validation()" value="afficher le prix">
     </h3>
-    <p>prix.instrument : <input type="text" size="10" id="prix.instrument" disabled="disabled"></p>
+    <p>prix instrument : <input type="text" size="10" id="prix instrument" disabled="disabled"></p>
     <p id="error"></p>
     <p id="metal_description"></p>
     <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/270px-SNice.svg.png">
