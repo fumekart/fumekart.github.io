@@ -1,28 +1,28 @@
 {
   "trompette": {
-    "info": "La trompette est un instrument a vent de la famille des cuivres",
+    "info": "La trompette est un instrument a vent de la famille des cuivres, un instruments au son puissant souvent utilisé dans le jazz",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Trompette_Sib.jpg/375px-Trompette_Sib.jpg",
     "cuivre 1": 239 ,
     "cuivre 2": 5699 ,
     "cuivre 3": 499 
   },
   "trombone": {
-    "info": "Black trombone! Monotone!",
+    "info": "Le Trombone est un instruments a vent de la famille des cuivres, dont la maitrise ne necessite pas de piston, comme pour la majorité des cuivres.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Trombone_CG_Bach42AG.jpg/375px-Trombone_CG_Bach42AG.jpg",
     "cuivre 1": 125,
     "cuivre 2": 147,
     "cuivre 3": 422
   },
   "cor": {
-    "info": "Le cor est ",
-    "image": "https://upload.wikimedia.org/wiki/File:French_horn_front.png?uselang=fr",
+    "info": "Le cor est un instuments a vent de la famille des cuivres, issu histoiquement des cors de alpes et des cor de chasses.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/French_horn_front.png/200px-French_horn_front.png",
     "cuivre 1": 1498 ,
     "cuivre 2": 9679 ,
     "cuivre 3": 5149 
   },
   "saxophone": {
-    "info": "Pouet!",
-    "image": "https://upload.wikimedia.org/wiki/File:CurvedSopranoAltoTenorSaxophoneComparison.jpg?uselang=fr",
+    "info": "Le saxophone, est un instrument a vent de la famille des bois, car il etais historiquement en bois? contrairement au saxhorn, qui appartient a la famille des cuivres.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/CurvedSopranoAltoTenorSaxophoneComparison.jpg/255px-CurvedSopranoAltoTenorSaxophoneComparison.jpg",
     "cuivre 1": 123,
     "cuivre 2": 193,
     "cuivre 3": 823
