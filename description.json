@@ -9,9 +9,9 @@
   "trombone": {
     "info": "Le Trombone est un instruments a vent de la famille des cuivres, dont la maitrise ne necessite pas de piston, comme pour la majorité des cuivres.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Trombone_CG_Bach42AG.jpg/375px-Trombone_CG_Bach42AG.jpg",
-    "cuivre 1": 125,
-    "cuivre 2": 147,
-    "cuivre 3": 422
+    "cuivre 1": 369,
+    "cuivre 2": 1398,
+    "cuivre 3": 939
   },
   "cor": {
     "info": "Le cor est un instuments a vent de la famille des cuivres, issu histoiquement des cors de alpes et des cor de chasses.",
@@ -23,8 +23,8 @@
   "saxophone": {
     "info": "Le saxophone, est un instrument a vent de la famille des bois, car il etais historiquement en bois? contrairement au saxhorn, qui appartient a la famille des cuivres.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/CurvedSopranoAltoTenorSaxophoneComparison.jpg/255px-CurvedSopranoAltoTenorSaxophoneComparison.jpg",
-    "cuivre 1": 123,
-    "cuivre 2": 193,
-    "cuivre 3": 823
+    "cuivre 1": 450,
+    "cuivre 2": 5444,
+    "cuivre 3": 949
   }
 }
