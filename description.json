@@ -15,14 +15,14 @@
   },
   "cor": {
     "info": "Le cor est ",
-    "image": "https://commons.wikimedia.org/wiki/File:French_horn_front.png?uselang=fr",
+    "image": "https://upload.wikimedia.org/wiki/File:French_horn_front.png?uselang=fr",
     "cuivre 1": 1498 ,
     "cuivre 2": 9679 ,
     "cuivre 3": 5149 
   },
   "saxophone": {
     "info": "Pouet!",
-    "image": "https://commons.wikimedia.org/wiki/File:CurvedSopranoAltoTenorSaxophoneComparison.jpg?uselang=fr",
+    "image": "https://upload.wikimedia.org/wiki/File:CurvedSopranoAltoTenorSaxophoneComparison.jpg?uselang=fr",
     "cuivre 1": 123,
     "cuivre 2": 193,
     "cuivre 3": 823
