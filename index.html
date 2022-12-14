@@ -77,7 +77,11 @@
     <p id="error"></p>
     <p id="metal_description"></p>
     <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/270px-SNice.svg.png">
-
+    <?php
+    session_start(); 
+    @$_SESSION["pagecount"]++; 
+    print("$pagecount");
+    ?>
    
 </body>
 </html>
